@@ -1,22 +1,19 @@
 import React from 'react';
+import Header from './components/Header/Header';
+import Main from './components/Main/Main';
+import Features from './components/Features/Features'
+
+import "./style.css";
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Hello World!
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Main />
+      <Features />
+      <Footer />
+    </>
   );
 }
 
