@@ -71,3 +71,5 @@ const Calendar = () => (
 		</div>
 	</section>
 );
+
+export default Calendar;
