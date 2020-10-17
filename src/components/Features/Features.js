@@ -2,18 +2,20 @@ import React from "react";
 import RellaxWrapper from 'react-rellax-wrapper';
 import "./features.css"
 
-const Features = (props) => {
-	//console.log(props);
-	const { name, height, diameter, mass, payload_weights: payloadWeights, description } = props;
+const rocketImages = {
+	'Falcon 1': 'falcon-1',
+	'Falcon 9': 'falcon-9',
+	'Falcon Heavy': 'falcon-heavy',
+	'Starship': 'starship',
+}
 
-	return (
-	
-    <section className="features">
+const Features = ({ name, height, diameter, mass, payload_weights: payloadWeights, description }) => (
+    
+	<section className="features">
 		<h2 className="features-title">
 			{name} <br/>Overview
 		</h2>
 		<div className="overview">
-
 			<table className="table">
 				<caption className="table-title">
 					Size
@@ -43,7 +45,7 @@ const Features = (props) => {
 			</table>
 			<RellaxWrapper speed={14}>
 				<img
-						src="img/falcon-1.png"
+						src={`img/${rocketImages[name]}.png`}
 						alt="rocket"
 						className="rocket"
 				/>
@@ -56,6 +58,6 @@ const Features = (props) => {
 			</article>
 		</div>
 	</section>
-)};
+);
 
 export default Features;
